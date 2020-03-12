@@ -36,7 +36,7 @@ const slideOut = keyframes`
 const Container = styled.div`
   display: flex;
   align-items: center;
-  background-color: #03b39f;
+  background-color: #cc4d3a;
   margin-top: 3rem;
   height: 20rem;
   overflow: hidden;
@@ -60,5 +60,3 @@ const SubHeading = styled.p`
   padding-top: 1rem;
   padding-bottom: 2rem;
 `
-
-const Button = styled(MonoButton)``
