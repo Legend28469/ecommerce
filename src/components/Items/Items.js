@@ -1,8 +1,9 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import Menu from "../Menu/Menu"
+import Card from "./Card"
 
-export default () => {
+export default ({ query }) => {
   const [category, setCategory] = useState("Home")
 
   return (
@@ -11,6 +12,18 @@ export default () => {
       <ItemContainer>
         <Title>{category}</Title>
         <SubTitle>View more</SubTitle>
+        <CardContainer>
+          {query.allMarkdownRemark.edges.map(item => {
+            return (
+              <Card
+                key={item.node.id}
+                img={item.node.frontmatter.image}
+                title={item.node.frontmatter.title}
+                description={item.node.frontmatter.description}
+              />
+            )
+          })}
+        </CardContainer>
       </ItemContainer>
     </Container>
   )
@@ -19,7 +32,6 @@ export default () => {
 const Container = styled.div`
   display: grid;
   margin-top: 3rem;
-  height: 20rem;
   grid-template-columns: 1fr 3fr;
   gap: 5rem;
 `
@@ -32,4 +44,12 @@ const Title = styled.h3`
 
 const SubTitle = styled.p`
   margin-top: 1rem;
+`
+
+const CardContainer = styled.div`
+  display: grid;
+  margin-top: 3rem;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 450px;
 `

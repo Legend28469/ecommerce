@@ -18,6 +18,21 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: "gatsby-remark-normalize-paths",
+            options: {
+              pathFields: ["image"],
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-remark-images`,
+    `gatsby-image`,
+    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
