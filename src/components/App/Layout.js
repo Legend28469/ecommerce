@@ -9,7 +9,6 @@ import React from "react"
 import GlobalStyle from "../../styles/Global"
 import { Reset } from "styled-reset"
 import styled from "styled-components"
-
 import Header from "../Header/Header"
 
 const Layout = ({ children }) => {

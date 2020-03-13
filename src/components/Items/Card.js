@@ -11,7 +11,7 @@ export default ({ img, title, description, link }) => {
           <Image
             fluid={img.childImageSharp.fluid}
             imgStyle={{ objectFit: "cover" }}
-            style={{ height: "100%" }}
+            style={{ height: "300px" }}
             alt="Shop image"
           />
           <Information>

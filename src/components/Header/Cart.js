@@ -3,7 +3,11 @@ import styled from "styled-components"
 import { FaShoppingCart } from "react-icons/fa"
 
 export default () => {
-  return <Icon />
+  return (
+    <div className="snipcart-checkout">
+      <Icon />
+    </div>
+  )
 }
 
 const Icon = styled(FaShoppingCart)`

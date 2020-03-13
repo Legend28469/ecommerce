@@ -5,7 +5,7 @@ import { Link } from "gatsby"
 export default () => {
   return (
     <Title>
-      <HomeLink>Store</HomeLink>
+      <HomeLink to="/">Store</HomeLink>
     </Title>
   )
 }

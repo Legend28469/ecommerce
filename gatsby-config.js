@@ -33,6 +33,14 @@ module.exports = {
     },
     `gatsby-remark-images`,
     {
+      resolve: "gatsby-plugin-snipcartv3",
+      options: {
+        apiKey:
+          "MjBlZGNhZTItNGQ1ZC00NGY3LTgwOWMtNjg4NmQ4NTk0NDA5NjM3MTkzNDE0OTQ0MjI0MDI4",
+        autopop: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
