@@ -22,6 +22,7 @@ module.exports = {
       options: {
         plugins: [
           {
+            // Needed this plugin to process product images in markdown
             resolve: "gatsby-remark-normalize-paths",
             options: {
               pathFields: ["image"],
@@ -31,7 +32,6 @@ module.exports = {
       },
     },
     `gatsby-remark-images`,
-    `gatsby-image`,
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {

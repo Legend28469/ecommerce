@@ -1,81 +1,23 @@
 import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 
-export default ({ img, title, description }) => {
+export default ({ img, title, description, link }) => {
   return (
     <>
       <Container>
-        <Image
-          fluid={img.childImageSharp.fluid}
-          imgStyle={{ objectFit: "cover" }}
-          style={{ height: "100%" }}
-          alt="Shop image"
-        />
-        <Information>
-          <Title>{title}</Title>
-          <SubTitle>{description}</SubTitle>
-        </Information>
-      </Container>
-      <Container>
-        <Image
-          fluid={img.childImageSharp.fluid}
-          imgStyle={{ objectFit: "cover" }}
-          style={{ height: "100%" }}
-          alt="Shop image"
-        />
-        <Information>
-          <Title>{title}</Title>
-          <SubTitle>{description}</SubTitle>
-        </Information>
-      </Container>
-      <Container>
-        <Image
-          fluid={img.childImageSharp.fluid}
-          imgStyle={{ objectFit: "cover" }}
-          style={{ height: "100%" }}
-          alt="Shop image"
-        />
-        <Information>
-          <Title>{title}</Title>
-          <SubTitle>{description}</SubTitle>
-        </Information>
-      </Container>
-      <Container>
-        <Image
-          fluid={img.childImageSharp.fluid}
-          imgStyle={{ objectFit: "cover" }}
-          style={{ height: "100%" }}
-          alt="Shop image"
-        />
-        <Information>
-          <Title>{title}</Title>
-          <SubTitle>{description}</SubTitle>
-        </Information>
-      </Container>
-      <Container>
-        <Image
-          fluid={img.childImageSharp.fluid}
-          imgStyle={{ objectFit: "cover" }}
-          style={{ height: "100%" }}
-          alt="Shop image"
-        />
-        <Information>
-          <Title>{title}</Title>
-          <SubTitle>{description}</SubTitle>
-        </Information>
-      </Container>
-      <Container>
-        <Image
-          fluid={img.childImageSharp.fluid}
-          imgStyle={{ objectFit: "cover" }}
-          style={{ height: "100%" }}
-          alt="Shop image"
-        />
-        <Information>
-          <Title>{title}</Title>
-          <SubTitle>{description}</SubTitle>
-        </Information>
+        <ProductLink to={link}>
+          <Image
+            fluid={img.childImageSharp.fluid}
+            imgStyle={{ objectFit: "cover" }}
+            style={{ height: "100%" }}
+            alt="Shop image"
+          />
+          <Information>
+            <Title>{title}</Title>
+          </Information>
+        </ProductLink>
       </Container>
     </>
   )
@@ -103,6 +45,6 @@ const Title = styled.h4`
   font-size: 1.2rem;
 `
 
-const SubTitle = styled.p`
-  line-height: 1.2;
+const ProductLink = styled(Link)`
+  text-decoration: none;
 `

@@ -1,8 +1,13 @@
 import React from "react"
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export default () => {
-  return <Title>Store</Title>
+  return (
+    <Title>
+      <HomeLink>Store</HomeLink>
+    </Title>
+  )
 }
 
 const Title = styled.h1`
@@ -10,4 +15,9 @@ const Title = styled.h1`
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
+`
+
+const HomeLink = styled(Link)`
+  text-decoration: none;
+  color: #000;
 `

@@ -23,6 +23,9 @@ export default () => {
               price
               title
             }
+            fields {
+              slug
+            }
           }
         }
       }

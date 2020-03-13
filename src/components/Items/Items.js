@@ -20,6 +20,7 @@ export default ({ query }) => {
                 img={item.node.frontmatter.image}
                 title={item.node.frontmatter.title}
                 description={item.node.frontmatter.description}
+                link={item.node.fields.slug}
               />
             )
           })}
@@ -50,6 +51,6 @@ const CardContainer = styled.div`
   display: grid;
   margin-top: 3rem;
   gap: 1rem;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 450px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto;
 `
